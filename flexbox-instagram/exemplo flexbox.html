@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<title>Flexbox - exemplo1</title>
+	<style type="text/css" media="screen">
+	 	* {
+		    box-sizing: border-box; 
+		  }
+		  body {
+		    display: flex;
+		    min-height: 100vh; /* usando medidas responsivas - 100% do comprimento da tela*/
+		    flex-direction: row; /*para acomodar os meus itens (2)*/
+		    margin: 0;
+		  }
+		  .col-1 {
+		    background: #69c7c4;
+		    flex: 1; /*fator do flex-grow*/
+		  }
+		  .col-2 {
+		    flex-direction: column; /* definir o segundo bloco como coluna*/
+		    flex: 5;/*aumentou o flex-grow*/
+		  }
+		  .content {
+		    display: flex;
+		    flex-direction: row; /* dentro do bloco de conteúdo os itens serão colocados em linha*/
+		  }
+		  .content1 {
+           min-height: 60vh;
+		  }
+		  header, footer {
+		    background: #1b9a96;
+		    height: 20vh;
+		  }
+		  header, footer, article, nav {
+		    padding: 0.5em;  /* medida responsiva = 16px*/
+		  }
+	  }
+	</style>
+</head>
+
+<body>
+  <nav class="col-1">Navegação</nav>
+  <div class="col-2">
+  	<header>Cabeçalho</header>
+    <main class="content">
+    <article class="content1">Conteúdo</article>
+    </main>
+  	<footer>Rodapé</footer>
+  </div>
+</body>
+</html>
